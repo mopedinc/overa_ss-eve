@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "_src"
+		},
+		{
+			"path": "dist"
+		}
+	],
+	"settings": {
+		"dartsass.targetDirectory": "../dist/common_css/",
+		"liveServer.settings.multiRootWorkspaceName": "sawakami",
+		"emmet.optimizeStylesheetParsing": false,
+		"liveSassCompile.settings.autoprefix": [],
+		"liveServer.settings.port": 5502
+	}
+}

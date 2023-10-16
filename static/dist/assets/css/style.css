@@ -1,0 +1,739 @@
+@charset "UTF-8";
+/* リセットcss
+/* resset.dev • v5.0.2 */
+/* # =================================================================
+   # Global selectors
+   # ================================================================= */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-break: normal;
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
+}
+
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+  /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit;
+}
+
+* {
+  padding: 0;
+  /* Reset `padding` and `margin` of all elements */
+  margin: 0;
+}
+
+/* # =================================================================
+     # General elements
+     # ================================================================= */
+hr {
+  overflow: visible;
+  /* Show the overflow in Edge and IE */
+  height: 0;
+  /* Add the correct box sizing in Firefox */
+  color: inherit;
+  /* Correct border color in Firefox. */
+}
+
+details,
+main {
+  display: block;
+}
+
+summary {
+  display: list-item;
+  /* Add the correct display in all browsers */
+}
+
+small {
+  font-size: 80%;
+  /* Set font-size to 80% in `small` elements */
+}
+
+[hidden] {
+  display: none;
+  /* Add the correct display in IE */
+}
+
+abbr[title] {
+  border-bottom: none;
+  /* Remove the bottom border in Chrome 57 */
+  /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari */
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+a {
+  background-color: transparent;
+  /* Remove the gray background on active links in IE 10 */
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+  /* Remove the outline when hovering in all browsers */
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* Specify the font family of code elements */
+}
+
+pre {
+  font-size: 1em;
+  /* Correct the odd `em` font sizing in all browsers */
+}
+
+b,
+strong {
+  font-weight: bolder;
+  /* Add the correct font weight in Chrome, Edge, and Safari */
+}
+
+/* https://gist.github.com/unruthless/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+table {
+  border-color: inherit;
+  /* Correct border color in all Chrome, Edge, and Safari. */
+  text-indent: 0;
+  /* Remove text indentation in Chrome, Edge, and Safari */
+}
+
+iframe {
+  border-style: none;
+}
+
+/* # =================================================================
+     # Forms
+     # ================================================================= */
+input {
+  border-radius: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+  /* Correct the cursor style of increment and decrement buttons in Chrome */
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  /* Correct the odd appearance in Chrome and Safari */
+  outline-offset: -2px;
+  /* Correct the outline style in Safari */
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  /* Remove the inner padding in Chrome and Safari on macOS */
+}
+
+textarea {
+  overflow: auto;
+  /* Internet Explorer 11+ */
+  resize: vertical;
+  /* Specify textarea resizability */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  /* Specify font inheritance of form elements */
+}
+
+optgroup {
+  font-weight: bold;
+  /* Restore the font weight unset by the previous rule */
+}
+
+button {
+  overflow: visible;
+  /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+}
+
+button,
+select {
+  text-transform: none;
+  /* Firefox 40+, Internet Explorer 11- */
+}
+
+/* Apply cursor pointer to button elements */
+button,
+[type=button],
+[type=reset],
+[type=submit],
+[role=button] {
+  cursor: pointer;
+}
+
+/* Remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* Replace focus style removed in the border reset above */
+button:-moz-focusring,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS */
+}
+
+/* Remove the default button styling in all browsers */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border-style: none;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline-width: 0;
+}
+
+/* Style select like a standard input */
+select {
+  -moz-appearance: none;
+  /* Firefox 36+ */
+  -webkit-appearance: none;
+  /* Chrome 41+ */
+}
+
+select::-ms-expand {
+  display: none;
+  /* Internet Explorer 11+ */
+}
+
+select::-ms-value {
+  color: currentColor;
+  /* Internet Explorer 11+ */
+}
+
+legend {
+  border: 0;
+  /* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit;
+  /* Correct the color inheritance from `fieldset` elements in IE */
+  display: table;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge and IE */
+  white-space: normal;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge 18- and IE */
+}
+
+::-webkit-file-upload-button {
+  /* Correct the inability to style clickable types in iOS and Safari */
+  -webkit-appearance: button;
+  color: inherit;
+  font: inherit;
+  /* Change font properties to `inherit` in Chrome and Safari */
+}
+
+/* Replace pointer cursor in disabled elements */
+[disabled] {
+  cursor: default;
+}
+
+/* # =================================================================
+     # Specify media element style
+     # ================================================================= */
+img {
+  border-style: none;
+  /* Remove border when inside `a` element in IE 8/9/10 */
+}
+
+/* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+progress {
+  vertical-align: baseline;
+}
+
+/* # =================================================================
+     # Accessibility
+     # ================================================================= */
+/* Specify the progress cursor of updating elements */
+[aria-busy=true] {
+  cursor: progress;
+}
+
+/* Specify the pointer cursor of trigger elements */
+[aria-controls] {
+  cursor: pointer;
+}
+
+/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+[aria-disabled=true] {
+  cursor: default;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+/* または */
+li {
+  list-style-type: none;
+}
+
+/* foundation/_extend.scss
+-------------------------------------------------- */
+@media screen and (min-width: 769px) {
+  a {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  a:hover {
+    opacity: 0.6;
+  }
+}
+/* global/_main.scss
+-------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #5C3740;
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+}
+
+a {
+  text-decoration: none;
+  color: #5C3740;
+}
+
+@media screen and (min-width: 769px) {
+  .pc {
+    display: block;
+  }
+  .sp {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pc {
+    display: none;
+  }
+  .sp {
+    display: block;
+  }
+}
+@media screen and (min-width: 769px) {
+  .m-main {
+    background: url(../img/top/page-bg.jpg);
+    background-size: cover;
+    min-width: 1080px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .m-main {
+    background: url(../img/top/page-bg-sp.jpg);
+    background-size: cover;
+  }
+}
+.m-main__ttl {
+  width: 724px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .m-main__ttl {
+    width: 308px;
+  }
+}
+.m-main__ttl-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.m-main__ttl-img::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #5C3740;
+}
+.m-main__ttl-img::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #5C3740;
+}
+.m-main__ttl p {
+  font-size: 46px;
+  padding: 0 50px;
+  padding-bottom: 10px;
+  line-height: 1;
+  white-space: nowrap;
+}
+@media screen and (max-width: 768px) {
+  .m-main__ttl p {
+    font-size: 20px;
+    padding: 0 16px;
+    white-space: nowrap;
+  }
+}
+.m-main__ttl h2 {
+  text-align: center;
+  border-bottom: 1px solid #5C3740;
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  .m-main__ttl h2 {
+    border-bottom: 1px solid #5C3740;
+  }
+}
+@media screen and (min-width: 769px) {
+  .m-main__ttl h2 {
+    font-size: 54px;
+    margin-top: 17px;
+    padding-bottom: 35px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .m-main__ttl h2 {
+    font-size: 22px;
+    margin-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+.m-main__txt p {
+  text-align: center;
+  font-size: 21px;
+  margin-top: 47px;
+  line-height: 2;
+}
+@media screen and (max-width: 768px) {
+  .m-main__txt p {
+    font-size: 13px;
+    line-height: 1.5384615385;
+    margin-top: 25px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .m-main__inner {
+    padding: 0 20px;
+  }
+}
+.m-main__boxs {
+  margin: 0 auto;
+}
+@media screen and (min-width: 769px) {
+  .m-main__boxs {
+    max-width: 970px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media screen and (max-width: 768px) {
+  .m-main__boxs {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+/* global/_haeder.scss
+-------------------------------------------------- */
+.g-haeder {
+  position: relative;
+}
+.g-haeder__wrap {
+  position: absolute;
+  right: 11px;
+  top: 28px;
+}
+@media screen and (min-width: 769px) {
+  .g-haeder ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 26px;
+    text-shadow: 1px 2px 6px #414141;
+  }
+}
+@media screen and (min-width: 769px) {
+  .g-haeder li {
+    margin: 0 29px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .g-haeder li {
+    margin: 0 5%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .g-haeder a {
+    color: #fff;
+  }
+}
+
+.g-haeder__sp {
+  min-height: 30px;
+}
+
+.g-haeder__spttl {
+  line-height: 0.5;
+  display: inline-block;
+  margin-top: 8px;
+  margin-left: 5px;
+}
+
+.g-haeder__spttl h2 {
+  font-size: 12px;
+}
+
+.g-haeder__spttl p {
+  font-size: 10px;
+}
+
+/* Navbar & Navmenu color */
+:root {
+  --background-navbar: rgba(55, 55, 55, 0.98);
+}
+
+.header {
+  background: var(--background-navbar);
+  position: fixed;
+  width: 100%;
+  height: 52px;
+}
+
+/* Nav items */
+.hamburger-menu {
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  margin-top: 32px;
+  padding: 0 0 10px 0;
+  clear: both;
+  background: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+  z-index: -1;
+  text-align: right;
+}
+
+/* Hamburger menu button */
+.menu-btn:checked ~ .hamburger-menu {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Hamburger menbu text */
+.hamburger-menu a {
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #5C3740;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.hamburger-menu li {
+  padding: 15px 0;
+  margin: 0 54px;
+  opacity: 0;
+}
+
+.menu-btn:checked ~ .hamburger-menu a,
+.menu-btn:checked ~ .hamburger-menu li {
+  opacity: 1;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.menu-icon {
+  display: inline-block;
+  cursor: pointer;
+  padding: 14px 14px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  right: 0px;
+}
+
+.navicon {
+  background: #5B373F;
+  display: block;
+  height: 1px;
+  width: 19px;
+  position: relative;
+  -webkit-transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+.navicon:before,
+.navicon:after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: #5B373F;
+  -webkit-transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+.navicon:before {
+  top: 7px;
+}
+
+.navicon:after {
+  bottom: 7px;
+}
+
+/* Hamburger Menu Animation Start */
+.menu-btn:checked ~ .menu-icon .navicon:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before {
+  top: 0;
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  bottom: 0;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: rgba(0, 0, 0, 0);
+  -webkit-transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+/* Hamburger Menu Animation End */
+/* オーバーレイのスタイル */
+.overlay {
+  display: none;
+  /* 初期状態では非表示 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* 半透明の背景色 */
+  z-index: 9999;
+  /* ハンバーガーメニューよりも上に配置 */
+  pointer-events: none;
+  /* クリックイベントを無効にする */
+}
+
+/* メニューが開いているときにオーバーレイを表示 */
+.menu-btn:checked ~ #overlay {
+  display: block;
+  pointer-events: auto;
+  /* クリックイベントを有効にする */
+}
+
+/* global/_footer.scss
+-------------------------------------------------- */
+.g-footer__wrap {
+  color: #333;
+  font-family: "小塚ゴシック Pro", "Kozuka Gothic Pro", sans-serif;
+  text-align: center;
+  font-size: 12px;
+}
+@media screen and (min-width: 769px) {
+  .g-footer__wrap {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+.g-footer__copy span {
+  color: #666666;
+  border-bottom: dotted;
+  border-color: #666666;
+  border-width: 1px;
+}
+@media screen and (max-width: 768px) {
+  .g-footer {
+    font-size: 10px;
+    padding: 0 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}

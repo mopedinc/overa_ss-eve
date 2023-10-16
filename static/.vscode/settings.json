@@ -1,0 +1,14 @@
+{
+  "git.ignoreLimitWarning": true,
+  "liveSassCompile.settings.forceBaseDirectory": "/_src/project_css/socialmedia-policy",
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/dist/css/common_css/project_css"
+    }
+  ],
+  "dartsass.targetDirectory": "dist/css/common_css/project_css/",
+  "liveServer.settings.port": 5502,
+  "dartsass.outputFormat": "cssonly"
+}
