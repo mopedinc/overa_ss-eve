@@ -5,7 +5,7 @@
 // ContentsWidth
 %w-content {
   @include get.pc {
-    max-width: 1080px;
+    max-width: 1050px;
     margin-left: auto;
     margin-right: auto;
     box-sizing: content-box;
@@ -17,31 +17,9 @@
     // padding-left: ;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 7%;
+    padding-right: 7%;
     box-sizing: border-box;
 
   }
-}
-
-%w-content2 {
-  @include get.pc {
-    max-width: 980px;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: content-box;
-  }
-
-  @include get.sp {
-    max-width: 980px;
-    width: 100%;
-    // padding-left: ;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 5%;
-    padding-right: 5%;
-    box-sizing: border-box;
-
-  }
-
 }

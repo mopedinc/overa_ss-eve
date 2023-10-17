@@ -1,0 +1,19 @@
+/* foundation/_mv.scss
+-------------------------------------------------- */
+@use "../foundation/import" as get;
+
+.m-mv {
+    &__wrap {
+        @extend %w-content;
+
+        & figure {
+            @include get.sp {
+                margin: 0 -8%;
+            }
+        }
+
+        & img {
+            width: 100%;
+        }
+    }
+}

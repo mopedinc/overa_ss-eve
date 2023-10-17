@@ -1,0 +1,102 @@
+/* foundation/_rest.scss
+-------------------------------------------------- */
+@use "../foundation/import" as get;
+
+.m-rest {
+    &__wrap {
+        @extend %w-content;
+
+        @include get.pc {
+            margin-top: 55px;
+        }
+
+        @include get.sp {
+            margin-top: 33px;
+        }
+
+        & img {
+            height: 45px;
+        }
+    }
+
+    &__type {
+        & img {
+            height: auto;
+
+            @include get.pc {
+                width: 232px;
+            }
+
+            @include get.sp {
+                height: auto;
+                width: 48.2%;
+                max-width: 200px;
+                height: 100%;
+            }
+        }
+
+        &-wrap {
+            margin-top: -10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            @include get.sp {
+                margin-top: 34px;
+            }
+        }
+
+        &-check {
+            text-align: center;
+            margin-bottom: 155px;
+            letter-spacing: 0.03em;
+
+            @include get.pc {
+                margin-top: 112px;
+            }
+
+            @include get.sp {
+                margin-top: 74px;
+                margin-bottom: 117px;
+            }
+
+            & h3 {
+                font-weight: 600;
+                letter-spacing: 0.03em;
+
+                @include get.pc {
+                    font-size: 30px;
+                }
+
+                @include get.sp {
+                    font-size: 20px;
+                }
+            }
+
+            & a {
+                display: block;
+                margin: 0 auto;
+
+                @include get.pc {
+                    width: 630px;
+                }
+            }
+
+            & img {
+                height: auto;
+
+                @include get.pc {
+                    width: 630px;
+                    margin-top: 24px;
+                }
+
+                @include get.sp {
+                    width: 100%;
+                    margin: 0 auto;
+                    margin-top: 30px;
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+}

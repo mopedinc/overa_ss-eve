@@ -14,9 +14,12 @@
 // ・サイト全体で使用する要素など
 @use 'global/main';
 @use 'global/header';
-@use 'global/footer';
 
 // [modules]
 // ・ページ単位の記述や Modules で設定したものと個別に違う場合など
+@use 'modules/mv';
+@use 'modules/admit';
+@use 'modules/rest';
+@use 'modules/promo-mats';
 
 // [patches]

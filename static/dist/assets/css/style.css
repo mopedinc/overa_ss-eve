@@ -332,6 +332,28 @@ li {
 /* foundation/_extend.scss
 -------------------------------------------------- */
 @media screen and (min-width: 769px) {
+  .m-promo-mats__wrap, .m-rest__wrap, .m-admit__wrap, .m-mv__wrap, .g-header__wrap {
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+  }
+}
+@media screen and (max-width: 768px) {
+  .m-promo-mats__wrap, .m-rest__wrap, .m-admit__wrap, .m-mv__wrap, .g-header__wrap {
+    max-width: 1080px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 7%;
+    padding-right: 7%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media screen and (min-width: 769px) {
   a {
     -webkit-transition: 0.3s;
     transition: 0.3s;
@@ -340,61 +362,63 @@ li {
     opacity: 0.6;
   }
 }
-/* global/_main.scss
+/* global/_haeder.scss
 -------------------------------------------------- */
-html {
-  scroll-behavior: smooth;
+.g-main {
+  background: url(../img/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  color: #3B66A2;
 }
-
-body {
-  color: #5C3740;
-  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+.g-main__lead {
+  text-align: center;
 }
-
-a {
-  text-decoration: none;
-  color: #5C3740;
-}
-
-@media screen and (min-width: 769px) {
-  .pc {
-    display: block;
-  }
-  .sp {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  .pc {
-    display: none;
-  }
-  .sp {
-    display: block;
-  }
+.g-main__lead h2 {
+  font-weight: 600;
+  letter-spacing: 0.03em;
 }
 @media screen and (min-width: 769px) {
-  .m-main {
-    background: url(../img/top/page-bg.jpg);
-    background-size: cover;
-    min-width: 1080px;
+  .g-main__lead h2 {
+    font-size: 36px;
+    margin-top: 46px;
+    margin-bottom: 36px;
   }
 }
 @media screen and (max-width: 768px) {
-  .m-main {
-    background: url(../img/top/page-bg-sp.jpg);
-    background-size: cover;
+  .g-main__lead h2 {
+    font-size: 26px;
+    line-height: 1.36;
+    margin-top: 30px;
+    margin-bottom: 26px;
   }
 }
-.m-main__ttl {
-  width: 724px;
-  margin: 0 auto;
+.g-main__lead p {
+  font-size: 18px;
+  letter-spacing: 0.078em;
+  line-height: 1.53;
+}
+.g-main__lead p span {
+  letter-spacing: 0.08em;
+}
+@media screen and (min-width: 769px) {
+  .g-main__lead p span {
+    font-size: 15px;
+  }
 }
 @media screen and (max-width: 768px) {
-  .m-main__ttl {
-    width: 308px;
+  .g-main__lead p span {
+    font-size: 12px;
   }
 }
-.m-main__ttl-img {
+
+/* global/_haeder.scss
+-------------------------------------------------- */
+.g-header {
+  position: relative;
+}
+.g-header__wrap {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -402,338 +426,179 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
-.m-main__ttl-img::before {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: #5C3740;
-}
-.m-main__ttl-img::after {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: #5C3740;
-}
-.m-main__ttl p {
-  font-size: 46px;
-  padding: 0 50px;
-  padding-bottom: 10px;
-  line-height: 1;
-  white-space: nowrap;
+@media screen and (min-width: 769px) {
+  .g-header__wrap {
+    min-height: 119px;
+  }
 }
 @media screen and (max-width: 768px) {
-  .m-main__ttl p {
+  .g-header__wrap {
+    min-height: 74px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .g-header__wrap img {
+    width: 75px;
+    height: 39px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .g-header__wrap img {
+    width: 50px;
+    height: 26px;
+  }
+}
+
+/* foundation/_mv.scss
+-------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  .m-mv__wrap figure {
+    margin: 0 -8%;
+  }
+}
+.m-mv__wrap img {
+  width: 100%;
+}
+
+/* foundation/_admit.scss
+-------------------------------------------------- */
+@media screen and (min-width: 769px) {
+  .m-admit__wrap {
+    margin-top: 64px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .m-admit__wrap {
+    margin-top: 39px;
+  }
+}
+.m-admit__wrap img {
+  height: 55px;
+}
+
+/* foundation/_rest.scss
+-------------------------------------------------- */
+@media screen and (min-width: 769px) {
+  .m-rest__wrap {
+    margin-top: 55px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .m-rest__wrap {
+    margin-top: 33px;
+  }
+}
+.m-rest__wrap img {
+  height: 45px;
+}
+.m-rest__type img {
+  height: auto;
+}
+@media screen and (min-width: 769px) {
+  .m-rest__type img {
+    width: 232px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .m-rest__type img {
+    height: auto;
+    width: 48.2%;
+    max-width: 200px;
+    height: 100%;
+  }
+}
+.m-rest__type-wrap {
+  margin-top: -10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .m-rest__type-wrap {
+    margin-top: 34px;
+  }
+}
+.m-rest__type-check {
+  text-align: center;
+  margin-bottom: 155px;
+  letter-spacing: 0.03em;
+}
+@media screen and (min-width: 769px) {
+  .m-rest__type-check {
+    margin-top: 112px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .m-rest__type-check {
+    margin-top: 74px;
+    margin-bottom: 117px;
+  }
+}
+.m-rest__type-check h3 {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+@media screen and (min-width: 769px) {
+  .m-rest__type-check h3 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .m-rest__type-check h3 {
     font-size: 20px;
-    padding: 0 16px;
-    white-space: nowrap;
   }
 }
-.m-main__ttl h2 {
-  text-align: center;
-  border-bottom: 1px solid #5C3740;
-  font-weight: 500;
-}
-@media screen and (max-width: 768px) {
-  .m-main__ttl h2 {
-    border-bottom: 1px solid #5C3740;
-  }
-}
-@media screen and (min-width: 769px) {
-  .m-main__ttl h2 {
-    font-size: 54px;
-    margin-top: 17px;
-    padding-bottom: 35px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .m-main__ttl h2 {
-    font-size: 22px;
-    margin-top: 12px;
-    padding-bottom: 12px;
-  }
-}
-.m-main__txt p {
-  text-align: center;
-  font-size: 21px;
-  margin-top: 47px;
-  line-height: 2;
-}
-@media screen and (max-width: 768px) {
-  .m-main__txt p {
-    font-size: 13px;
-    line-height: 1.5384615385;
-    margin-top: 25px;
-  }
-}
-@media screen and (min-width: 769px) {
-  .m-main__inner {
-    padding: 0 20px;
-  }
-}
-.m-main__boxs {
+.m-rest__type-check a {
+  display: block;
   margin: 0 auto;
 }
 @media screen and (min-width: 769px) {
-  .m-main__boxs {
-    max-width: 970px;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  .m-rest__type-check a {
+    width: 630px;
   }
 }
-@media screen and (max-width: 768px) {
-  .m-main__boxs {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-/* global/_haeder.scss
--------------------------------------------------- */
-.g-haeder {
-  position: relative;
-}
-.g-haeder__wrap {
-  position: absolute;
-  right: 11px;
-  top: 28px;
-}
-@media screen and (min-width: 769px) {
-  .g-haeder ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 26px;
-    text-shadow: 1px 2px 6px #414141;
-  }
-}
-@media screen and (min-width: 769px) {
-  .g-haeder li {
-    margin: 0 29px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .g-haeder li {
-    margin: 0 5%;
-  }
-}
-@media screen and (min-width: 769px) {
-  .g-haeder a {
-    color: #fff;
-  }
-}
-
-.g-haeder__sp {
-  min-height: 30px;
-}
-
-.g-haeder__spttl {
-  line-height: 0.5;
-  display: inline-block;
-  margin-top: 8px;
-  margin-left: 5px;
-}
-
-.g-haeder__spttl h2 {
-  font-size: 12px;
-}
-
-.g-haeder__spttl p {
-  font-size: 10px;
-}
-
-/* Navbar & Navmenu color */
-:root {
-  --background-navbar: rgba(55, 55, 55, 0.98);
-}
-
-.header {
-  background: var(--background-navbar);
-  position: fixed;
-  width: 100%;
-  height: 52px;
-}
-
-/* Nav items */
-.hamburger-menu {
-  list-style: none;
-  position: absolute;
-  width: 100%;
+.m-rest__type-check img {
   height: auto;
-  top: 0;
-  margin-top: 32px;
-  padding: 0 0 10px 0;
-  clear: both;
-  background: #fff;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  opacity: 0;
-  z-index: -1;
+}
+@media screen and (min-width: 769px) {
+  .m-rest__type-check img {
+    width: 630px;
+    margin-top: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .m-rest__type-check img {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    max-width: 300px;
+  }
+}
+
+/* foundation/_promo-mats.scss
+-------------------------------------------------- */
+.m-promo-mats__wrap {
+  padding-bottom: 3px;
+}
+@media screen and (max-width: 768px) {
+  .m-promo-mats__wrap {
+    padding: 0 1%;
+    padding-bottom: 3px;
+  }
+}
+.m-promo-mats__wrap p {
+  font-size: 14px;
+  color: #000;
   text-align: right;
 }
-
-/* Hamburger menu button */
-.menu-btn:checked ~ .hamburger-menu {
-  opacity: 1;
-  z-index: 1;
-}
-
-/* Hamburger menbu text */
-.hamburger-menu a {
-  text-decoration: none;
-  font-weight: 500;
-  letter-spacing: 2px;
-  font-size: 16px;
-  text-transform: capitalize;
-  color: #5C3740;
-  opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.hamburger-menu li {
-  padding: 15px 0;
-  margin: 0 54px;
-  opacity: 0;
-}
-
-.menu-btn:checked ~ .hamburger-menu a,
-.menu-btn:checked ~ .hamburger-menu li {
-  opacity: 1;
-}
-
-.menu-btn {
-  display: none;
-}
-
-.menu-icon {
-  display: inline-block;
-  cursor: pointer;
-  padding: 14px 14px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  position: absolute;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  top: 50%;
-  right: 0px;
-}
-
-.navicon {
-  background: #5B373F;
-  display: block;
-  height: 1px;
-  width: 19px;
-  position: relative;
-  -webkit-transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
-  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
-}
-
-.navicon:before,
-.navicon:after {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background: #5B373F;
-  -webkit-transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
-  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
-}
-
-.navicon:before {
-  top: 7px;
-}
-
-.navicon:after {
-  bottom: 7px;
-}
-
-/* Hamburger Menu Animation Start */
-.menu-btn:checked ~ .menu-icon .navicon:before {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-.menu-btn:checked ~ .menu-icon .navicon:after {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before {
-  top: 0;
-}
-
-.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  bottom: 0;
-}
-
-.menu-btn:checked ~ .menu-icon .navicon {
-  background: rgba(0, 0, 0, 0);
-  -webkit-transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
-  transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
-}
-
-/* Hamburger Menu Animation End */
-/* オーバーレイのスタイル */
-.overlay {
-  display: none;
-  /* 初期状態では非表示 */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  /* 半透明の背景色 */
-  z-index: 9999;
-  /* ハンバーガーメニューよりも上に配置 */
-  pointer-events: none;
-  /* クリックイベントを無効にする */
-}
-
-/* メニューが開いているときにオーバーレイを表示 */
-.menu-btn:checked ~ #overlay {
-  display: block;
-  pointer-events: auto;
-  /* クリックイベントを有効にする */
-}
-
-/* global/_footer.scss
--------------------------------------------------- */
-.g-footer__wrap {
-  color: #333;
-  font-family: "小塚ゴシック Pro", "Kozuka Gothic Pro", sans-serif;
-  text-align: center;
-  font-size: 12px;
-}
-@media screen and (min-width: 769px) {
-  .g-footer__wrap {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-}
-.g-footer__copy span {
-  color: #666666;
-  border-bottom: dotted;
-  border-color: #666666;
-  border-width: 1px;
-}
 @media screen and (max-width: 768px) {
-  .g-footer {
-    font-size: 10px;
-    padding: 0 10px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+  .m-promo-mats__wrap p {
+    font-size: 12px;
+    text-align: center;
   }
 }

@@ -1,0 +1,21 @@
+/* foundation/_admit.scss
+-------------------------------------------------- */
+@use "../foundation/import" as get;
+
+.m-admit {
+    &__wrap {
+        @extend %w-content;
+
+        @include get.pc {
+            margin-top: 64px;
+        }
+
+        @include get.sp {
+            margin-top: 39px;
+        }
+
+        & img {
+            height: 55px;
+        }
+    }
+}
