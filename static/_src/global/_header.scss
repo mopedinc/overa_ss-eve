@@ -1,11 +1,12 @@
-/* global/_haeder.scss
--------------------------------------------------- */
+/* --------------------
+ .header
+-------------------- */
 @use "../foundation/import" as get;
 
-.g-header {
+.header {
     position: relative;
 
-    &__wrap {
+    &Wrap {
         @extend %w-content;
         width: 100%;
         display: flex;
@@ -13,6 +14,12 @@
 
         @include get.pc {
             min-height: 119px;
+            a{
+                transition: 0.3S;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
         }
 
         @include get.sp {

@@ -1,9 +1,10 @@
-/* foundation/_promo-mats.scss
--------------------------------------------------- */
+/*--------------------
+ .promoMats
+-------------------- */
 @use "../foundation/import" as get;
 
-.m-promo-mats {
-    &__wrap {
+.promoMats {
+    &Wrap {
         @extend %w-content;
         padding-bottom: 3px;
 

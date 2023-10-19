@@ -1,17 +1,25 @@
-/* global/_haeder.scss
--------------------------------------------------- */
+/*--------------------
+ .main
+-------------------- */
 @use "../foundation/import" as get;
 
-.g-main {
+.main {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    color: #3B66A2;
+    @include get.pc {
     background: url(../img/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    color: #3B66A2;
+    }
+    @include get.sp {
+        background: url(../img/bg-sp.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;    
+    }
 
-    &__lead {
+    &Lead {
+        /* 中見出し */
         text-align: center;
-
         & h2 {
             font-weight: 600;
             letter-spacing: 0.03em;
@@ -29,22 +37,32 @@
                 margin-bottom: 26px;
             }
         }
+        
 
         & p {
             font-size: 18px;
             letter-spacing: 0.078em;
             line-height: 1.53;
+            font-weight: 500;
 
             & span {
                 letter-spacing: 0.08em;
 
                 @include get.pc {
                     font-size: 15px;
+                    display: block;
                 }
 
                 @include get.sp {
                     font-size: 12px;
+                    display: block;
                 }
+            }
+        }
+        &Admit1{
+            margin-bottom: 29px;
+            & p{
+                margin-bottom: 10px;
             }
         }
     }

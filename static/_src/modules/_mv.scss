@@ -1,19 +1,18 @@
-/* foundation/_mv.scss
--------------------------------------------------- */
+/* --------------------
+ .mv
+-------------------- */
 @use "../foundation/import" as get;
 
-.m-mv {
-    &__wrap {
+.mv {
+
+    &Wrap {
         @extend %w-content;
-
-        & figure {
-            @include get.sp {
-                margin: 0 -8%;
-            }
+        @include get.sp {
+            padding: unset;
         }
-
-        & img {
+            & img {
             width: 100%;
+            height: 100%;
         }
     }
 }

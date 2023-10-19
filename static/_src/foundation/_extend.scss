@@ -1,5 +1,3 @@
-/* foundation/_extend.scss
--------------------------------------------------- */
 @use "mixins" as get;
 
 // ContentsWidth
@@ -9,6 +7,7 @@
     margin-left: auto;
     margin-right: auto;
     box-sizing: content-box;
+    padding: 0 3%;
   }
 
   @include get.sp {
